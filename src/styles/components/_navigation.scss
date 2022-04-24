@@ -1,0 +1,26 @@
+.navigation {
+  @extend %font-prim;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  color: $color-white;
+  &__link {
+    padding: 27px 21px;
+    list-style-type: none;
+    opacity: 0.5;    
+    cursor: pointer;
+    @extend %transition;
+    &.active, &.active:hover {
+      background: rgba(223, 70, 142, 1);
+      opacity: 1;
+    }
+    &:hover {      
+      opacity: 1;
+      background: rgba(69, 90, 100, 1);
+    }
+    &-icon {
+      margin-right: 15px;
+    }
+  }  
+}

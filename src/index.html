@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>justFree</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://use.fontawesome.com/3df6831711.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header__logo-line">      
+      <!-- <span class="header__hamburger hamburger"><span class="hamburger__line"></span></span> -->
+        <a href="#" class="header__logo">
+          <img class="logo" src="./images/justFree.png" alt="justFree">
+        </a>      
+      </div>
+      <nav class="header__navigation">
+        <ul class="navigation">
+          <li class="navigation__link active">          
+            <img class="navigation__link-icon" src="./images/Dashboard.png">Home
+          </li>
+          <li class="navigation__link">
+            <img class="navigation__link-icon" src="./images/Clock.png">Time Management
+          </li>
+          <li class="navigation__link">
+            <img class="navigation__link-icon" src="./images//Box.png">Inbox
+          </li>
+          <li class="navigation__link">
+            <img class="navigation__link-icon" src="./images/Calendar.png">Calendar
+          </li>
+          <li class="navigation__link">
+            <img class="navigation__link-icon" src="./images/Activity.png">Analytics
+          </li>
+          <li class="navigation__link">
+            <img class="navigation__link-icon" src="./images/Cogwheel.png">Settings
+          </li>
+        </ul>
+      </nav>
+    </header>
+  
+    <main>
+      <section class="section search">        
+        <div class="wrapper search__wrapper">              
+          <div class="search__text">
+            <div class="search__icon">
+              <img src="./images/Search.png" alt="Search">
+            </div>
+            <input type="text" placeholder="Search">
+          </div>
+          <div class="search__auth">
+            <img class="search__auth_bell" src="./images/Bell.png" alt="bell">
+            <span class="search__auth_name">Filip J.
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </span>
+            <div class="search__auth_icon">F</div>            
+          </div>          
+        </div>            
+      </section>
+
+      <section class="section graph">
+        <div class="wrapper graph__wrapper">
+          <div class="section-header">
+            <h2>Hi Filip</h2>
+            <p>Checkout your latest projects and their progress.</p>
+          </div> 
+
+          <hr />
+
+          <div class="chart-container">
+            <div class="chart__top-line">
+              <div class="section-header">
+                <h2 class="chart-header">Wavy Lines</h2>
+                <p class="chart-text">Working Hours</p>
+              </div>
+              <span class="chart-separator">this week
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>  
+            </div>
+                        
+            <div class="chart__canvas">
+              <canvas id="my-chart" height="100"></canvas>
+            </div>      
+          </div>
+
+        </div>        
+      </section>
+
+      <section class="section statistics">
+        <div class="wrapper statistics__wrapper">
+          <div class="statistics__header">
+            <div class="section-header">
+              <h2>Crunch some Numbers</h2>
+              <p>See how your projects are progressing via the new statistics engine</p>
+            </div>
+  
+            <div class="statistics__timeline">Timeline:
+              <button class="btn">7 Days
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </button> 
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="statistics__info">
+            <div class="statistics__parametrs">
+              <div class="statistics__info_block">
+                <div class="statistics__info_text">
+                  <h3>96</h3>
+                  <p>Working Hours</p>
+                </div>
+                <div class="statistics__info_image bars__image">
+                  <img src="./images/Graphic.png" alt="Graphic">
+                </div>
+              </div>
+              <div class="statistics__info_block">
+                <div class="statistics__info_text">
+                  <h3>1,204</h3>
+                  <p>Conversations</p>
+                </div>
+                <div class="statistics__info_image lines__image">
+                  <img src="./images/Curve.png" alt="Graphic">
+                </div>
+              </div>
+              <div class="statistics__info_block">
+                <div class="statistics__info_text">
+                  <h3>7</h3>
+                  <p>People</p>
+                </div>
+                <div class="statistics__info_image circles__image">
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                </div>                
+              </div>
+            </div>
+
+            <div class="chart-container statistics__chart">
+              <div class="chart__top-line">
+                <div class="section-header">
+                  <h2 class="chart-header">Wavy Lines</h2>
+                  <p class="chart-text">Working Hours</p>
+                </div>
+                <span class="chart-separator">this week
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </span>  
+              </div>
+                        
+              <div class="chart__canvas">
+                <canvas id="statistic-chart" height="160"></canvas>
+              </div>      
+            </div>  
+          </div>
+        </div>               
+      </section>
+
+      <section class="section progress">
+        <div class="wrapper progress__wrapper">
+          <div class="section-header">
+            <h2>Current Progress</h2>
+            <p>This table will show you how your current projectrs are behaving.</p>
+          </div> 
+
+          <hr /> 
+          
+          <div class="progress__info">
+            <div class="progress__info_line">
+              <div class="left-column">
+                <div class="square"></div>
+                <div class="section-header">
+                  <h2>Project Title</h2>
+                  <p>Design Development</p>
+                </div>
+              </div>           
+              <div class="right-column">
+                <span>Last updated Today at 4:24 AM</span>
+                <span class="progress-time">
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  26:30
+                </span>
+                <span class="progress-comment">
+                  <i class="fa fa-comment-o" aria-hidden="true"></i>
+                  624
+                </span>
+                <span class="progress_bar" data-type="red"></span>
+              </div>    
+            </div>
+
+            <div class="progress__info_line">
+              <div class="left-column">
+                <div class="square"></div>
+                <div class="section-header">
+                  <h2>Project Title</h2>
+                  <p>Design Development</p>
+                </div>
+              </div>           
+              <div class="right-column">
+                <span>Last updated Today at 4:24 AM</span>
+                <span class="progress-time">
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  26:30
+                </span>
+                <span class="progress-comment">
+                  <i class="fa fa-comment-o" aria-hidden="true"></i>
+                  624
+                </span>
+                <span class="progress_bar" data-type="green"></span>
+              </div>    
+            </div>
+
+            <div class="progress__info_line">
+              <div class="left-column">
+                <div class="square"></div>
+                <div class="section-header">
+                  <h2>Project Title</h2>
+                  <p>Design Development</p>
+                </div>
+              </div>           
+              <div class="right-column">
+                <span>Last updated Today at 4:24 AM</span>
+                <span class="progress-time">
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  26:30
+                </span>
+                <span class="progress-comment">
+                  <i class="fa fa-comment-o" aria-hidden="true"></i>
+                  624
+                </span>
+                <span class="progress_bar" data-type="blue"></span>
+              </div>    
+            </div>
+
+            <div class="progress__info_line">
+              <div class="left-column">
+                <div class="square"></div>
+                <div class="section-header">
+                  <h2>Project Title</h2>
+                  <p>Design Development</p>
+                </div>
+              </div>           
+              <div class="right-column">
+                <span>Last updated Today at 4:24 AM</span>
+                <span class="progress-time">
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  26:30
+                </span>
+                <span class="progress-comment">
+                  <i class="fa fa-comment-o" aria-hidden="true"></i>
+                  624
+                </span>
+                <span class="progress_bar" data-type="red"></span>
+              </div>    
+            </div>
+          </div>  
+        </div>        
+      </section>
+
+      <section class="section client">
+        <div class="wrapper client__wrapper">
+          <div class="client__header">
+            <div class="section-header">
+              <h2>Crunch some Numbers</h2>
+              <p>See how your projects are progressing via the new statistics engine</p>
+            </div>
+  
+            <div class="statistics__timeline">Timeline:
+              <button class="btn">7 Days
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </button> 
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="layout-3-column client-container">
+            <div class="client__hours client__card">
+              <div class="section-header">
+                <h3>Client Hours</h3>
+                <p>Working Hours</p>
+              </div>
+              <div class="client-ellipse">
+                <div class="section-header">                
+                  <h3>96</h3>
+                  <p>Working Hours</p>
+                </div>
+              </div>              
+              <ul class="client__list">
+                <li>Sweet & Simple LTD. <span>37:45 h</span></li>
+                <li>Nike Running Shoes <span>16:22 h</span></li>
+                <li>Some Cool Company <span>3:14 h</span></li>
+              </ul>                
+            </div>
+
+            <div class="client__about client__card">
+              <div class="client__foto">
+                <img class="foto-circle" src="./images/Circle.png" alt="Circle">
+              </div>
+              <div class="section-header foto-text">
+                <h2>Jake Appleseed</h2>
+                <p>London, UK</p>
+              </div>
+              <div class="client__info">
+                <div class="client__info_top">
+                  <div class="client-text">                    
+                    <p>Working Hours</p>
+                    <h3>14 hours</h3>                    
+                  </div>
+                  <div class="client-text">
+                    <p>Amount Total</p>
+                    <h3>$ 6,269</h3>                                        
+                  </div>
+                </div>
+                <div class="client__info_bottom">
+                  <div class="client-text">
+                    <p>Overdue</p> 
+                    <h3>$ 829</h3>                                       
+                  </div>
+                  <div class="client-text">
+                    <p>% overall work</p>
+                    <h3>48%</h3>                                        
+                  </div>
+                </div>                
+              </div>              
+              <a href="#">Send Invoice</a>
+            </div>
+
+            <div class="client__overdue client__card">
+              <div class="section-header">
+                <h3>Total Overdue</h3>
+                <p>I need Dollars</p>
+              </div>
+              <span class="client__overdue_text">$14,220</span>
+              <div class="chart__canvas client__chart">
+                <canvas id="client-chart" height="190"></canvas>
+              </div>             
+              <a href="#">Export PDF</a>
+            </div>            
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>  
+</body>
+</html>

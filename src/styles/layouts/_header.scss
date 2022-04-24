@@ -1,0 +1,11 @@
+.header {  
+  min-width: 14.9vw;
+  background: $color-additional;
+  min-height: 100vh;
+  &__logo {
+    display: flex;
+    justify-content: center;
+    padding: 27px 0;
+    background: $color-logo;
+  }
+}

@@ -1,0 +1,54 @@
+.search {
+  background: $color-seach;
+  padding: 26px 0;
+  &__icon {
+    display: inline-block;
+    position: absolute;
+    left: -35px;
+  }
+  &__text {
+    position: relative;
+    flex-grow: 1;    
+    input {
+      width: 90%; 
+      border: 1px solid $color-seach;
+      background: $color-seach;   
+      &::placeholder {
+        color: $color-primary;
+      }
+      &:focus {
+        outline: none;
+        border: 1px solid $color-primary;
+        border-radius: 5px;
+      }
+    }
+  }
+  &__auth {
+    position: relative;
+    &_bell, i {
+      cursor: pointer;
+    }
+    &_name {
+      display: inline-block;
+      border-left: 3px solid $color-border;
+      padding-left: 20px;
+      margin-left: 28px;
+    }
+    &_icon {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+      right: -53px;
+      top: -10px;
+      color: #fff;
+      background-color: #37474f;
+      border-radius: 50%;
+    }  
+  }
+}
+  
+

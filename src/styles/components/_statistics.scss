@@ -1,0 +1,79 @@
+.statistics {
+  padding: 63px 0 49px;    
+  &__header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__timeline {
+    align-self: flex-start;
+  }  
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    &_block {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 169px;
+      border-bottom: 2px solid #ebedef;
+      &:last-child {
+        border-bottom: none;
+      }
+    }    
+    &_text { 
+      flex-basis: 100px;  
+      display: flex;    
+      flex-direction: column;    
+      justify-content: center;
+      align-items: center;
+      height: 3px;
+      p {
+        margin: 0;
+        font-size: 13px;
+      }
+    }
+    &_image {
+      display: flex;
+      flex-basis: 55%;
+      justify-content: center;
+    }    
+  }
+  &__parametrs {
+    display: flex;
+    flex-direction: column;    
+    flex-basis: 32.5%;
+    background: $color-white;
+  }
+  .circles__image {
+    justify-content: start;
+    flex-wrap: wrap;
+    max-width: 174px;  
+    .circle {
+      width: 33px;
+      height: 33px;
+      border-radius: 100%;
+      margin: 0 7px 7px 0;           
+      &:nth-child(odd) {
+        background-color: rgba(176, 190, 197, 1);
+      }
+      &:nth-child(even) {
+        background-color: rgba(207, 216, 220, 1);
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__chart {
+    width: 64.5%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    span.chart-separator {
+      margin-right: 7px;
+    }
+  }  
+}
